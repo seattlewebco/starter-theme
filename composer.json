@@ -41,10 +41,7 @@
   },
   "autoload": {
     "psr-4": {
-      "SeattleWebCo\\StarterTheme\\Admin\\": "lib/admin/",
-      "SeattleWebCo\\StarterTheme\\Functions\\": "lib/functions/",
-      "SeattleWebCo\\StarterTheme\\Plugins\\": "lib/plugins/",
-      "SeattleWebCo\\StarterTheme\\Shortcodes\\": "lib/shortcodes/" 
+      "SeattleWebCo\\StarterTheme\\Classes\\": "lib/classes/"
     }
   },
   "config": {

@@ -6,6 +6,10 @@
  */
 
 
+if ( file_exists( trailingslashit( __DIR__ ) . '../vendor/autoload.php' ) ) {
+    include_once trailingslashit( __DIR__ ) . '../vendor/autoload.php';
+}
+
 $files = [
     // Admin
     'admin/customizer.php',
