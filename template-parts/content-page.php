@@ -7,6 +7,8 @@
  * @package swc
  */
 
+use function SeattleWebCo\StarterTheme\Functions\post_thumbnail;
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -18,7 +20,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php swc_post_thumbnail(); ?>
+	<?php post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php

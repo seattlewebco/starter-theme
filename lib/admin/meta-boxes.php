@@ -4,3 +4,5 @@
  *
  * @package swc
  */
+
+namespace SeattleWebCo\StarterTheme\Admin;

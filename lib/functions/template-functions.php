@@ -5,6 +5,8 @@
  * @package swc
  */
 
+namespace SeattleWebCo\StarterTheme\Functions;
+
 /**
  * Adds custom classes to the array of body classes.
  *
@@ -31,7 +33,7 @@ function swc_body_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'body_class', 'swc_body_classes' );
+add_filter( 'body_class', __NAMESPACE__ . '\swc_body_classes' );
 
 function swc_post_classes( $classes ) {
 	if ( ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) && is_admin() ) {
@@ -46,7 +48,7 @@ function swc_post_classes( $classes ) {
 
 	return $classes;
 }
-add_filter( 'post_class', 'swc_post_classes' );
+add_filter( 'post_class', __NAMESPACE__ . '\swc_post_classes' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -68,7 +70,7 @@ function swc_content_width( $content_width ) {
 
 	return $content_width;
 }
-add_filter( 'content_width', 'swc_content_width' );
+add_filter( 'content_width', __NAMESPACE__ . '\swc_content_width' );
 
 /**
  * Add a pingback url auto-discovery header for single posts, pages, or attachments.
@@ -78,7 +80,7 @@ function swc_pingback_header() {
 		printf( '<link rel="pingback" href="%s">', esc_url( get_bloginfo( 'pingback_url' ) ) );
 	}
 }
-add_action( 'wp_head', 'swc_pingback_header' );
+add_action( 'wp_head', __NAMESPACE__ . '\swc_pingback_header' );
 
 /**
  * Adds a custom logo when header is sticky
@@ -92,7 +94,7 @@ function swc_custom_sticky_logo( $html ) {
 
 	return $html;
 }
-add_filter( 'get_custom_logo', 'swc_custom_sticky_logo' );
+add_filter( 'get_custom_logo', __NAMESPACE__ . '\swc_custom_sticky_logo' );
 
 /**
  * Set syntax color for code block.
@@ -102,7 +104,7 @@ add_filter( 'get_custom_logo', 'swc_custom_sticky_logo' );
 function swc_set_syntax_color() {
 	return 'github';
 }
-add_filter( 'syntax_highlighting_code_block_style', 'swc_set_syntax_color' );
+add_filter( 'syntax_highlighting_code_block_style', __NAMESPACE__ . '\swc_set_syntax_color' );
 
 /**
  * Undocumented function
@@ -140,4 +142,4 @@ function swc_hook_loader() {
 		}
 	}
 }
-add_action( 'wp', 'swc_hook_loader' );
+add_action( 'wp', __NAMESPACE__ . '\swc_hook_loader' );

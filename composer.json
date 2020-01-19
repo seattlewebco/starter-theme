@@ -39,11 +39,20 @@
       "SeoThemes\\GenesisStarterTheme\\Tests\\Integration\\": "tests/php/integration/"
     }
   },
+  "autoload": {
+    "psr-4": {
+      "SeattleWebCo\\StarterTheme\\Admin\\": "lib/admin/",
+      "SeattleWebCo\\StarterTheme\\Functions\\": "lib/functions/",
+      "SeattleWebCo\\StarterTheme\\Plugins\\": "lib/plugins/",
+      "SeattleWebCo\\StarterTheme\\Shortcodes\\": "lib/shortcodes/" 
+    }
+  },
   "config": {
     "preferred-install": {
       "*": "dist"
     },
-    "sort-order": true
+    "sort-order": true,
+    "optimize-autoloader": true
   },
   "minimum-stability": "dev",
   "prefer-stable": true,

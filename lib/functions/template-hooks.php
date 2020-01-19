@@ -5,6 +5,7 @@
  * @package swc
  */
 
+namespace SeattleWebCo\StarterTheme\Functions;
 
 /**
  * Load the WordPress header
@@ -12,7 +13,7 @@
 function swc_header() {
     get_header();
 }
-add_action( 'swc_header', 'swc_header', 0 );
+add_action( 'swc_header', __NAMESPACE__ . '\swc_header', 0 );
 
 
 /**
@@ -23,12 +24,12 @@ add_action( 'swc_header', 'swc_header', 0 );
 function swc_footer() {
     get_footer();
 }
-add_action( 'swc_footer', 'swc_footer', 20 );
+add_action( 'swc_footer', __NAMESPACE__ . '\swc_footer', 20 );
 
 /**
  * Adds hero section in our new position
  */
-add_action( 'swc_before_content_wrap', 'swc_custom_header' );
+add_action( 'swc_before_content_wrap', __NAMESPACE__ . '\swc_custom_header' );
 
 /**
  * Conditionally load the sidebar
@@ -38,16 +39,16 @@ function swc_sidebar() {
         get_sidebar();
     }
 }
-add_action( 'swc_after_content', 'swc_sidebar' );
+add_action( 'swc_after_content', __NAMESPACE__ . '\swc_sidebar' );
 
 function swc_before_loop() {
     ?>
     <header>
-        <h1 class="page-title screen-reader-text"><?php swc_get_the_title(); ?></h1>
+        <h1 class="page-title screen-reader-text"><?php the_page_title(); ?></h1>
     </header>
     <?php
 }
-add_action( 'swc_before_loop', 'swc_before_loop' );
+add_action( 'swc_before_loop', __NAMESPACE__ . '\swc_before_loop' );
 
 function swc_entry_header() {
     ?>
@@ -58,7 +59,7 @@ function swc_entry_header() {
 
     <?php
 }
-add_action( 'swc_entry', 'swc_entry_header', 5 );
+add_action( 'swc_entry', __NAMESPACE__ . '\swc_entry_header', 5 );
 
 function swc_entry_content() {
     ?>
@@ -69,7 +70,7 @@ function swc_entry_content() {
 
     <?php
 }
-add_action( 'swc_entry', 'swc_entry_content' );
+add_action( 'swc_entry', __NAMESPACE__ . '\swc_entry_content' );
 
 function swc_entry_footer() {
     ?>
@@ -80,12 +81,12 @@ function swc_entry_footer() {
 
     <?php
 }
-add_action( 'swc_entry', 'swc_entry_footer', 20 );
+add_action( 'swc_entry', __NAMESPACE__ . '\swc_entry_footer', 20 );
 
 function swc_loop() {
     get_template_part( 'template-parts/content', get_post_type() );
 }
-add_action( 'swc_loop', 'swc_loop' );
+add_action( 'swc_loop', __NAMESPACE__ . '\swc_loop' );
 
 
 function swc_comments() {
@@ -98,22 +99,22 @@ function swc_comments() {
         comments_template();
     }
 }
-add_action( 'swc_loop', 'swc_comments', 15 );
+add_action( 'swc_loop', __NAMESPACE__ . '\swc_comments', 15 );
 
 
 function swc_after_loop() {
     the_posts_navigation();
 }
-add_action( 'swc_after_loop', 'swc_after_loop' );
+add_action( 'swc_after_loop', __NAMESPACE__ . '\swc_after_loop' );
 
 
 function swc_content_none() {
-    get_template_part( 'template-parts/content', 'none' );
+    get_template_part( 'template-parts/content', __NAMESPACE__ . '\none' );
 }
-add_action( 'swc_content_none', 'swc_content_none' );
+add_action( 'swc_content_none', __NAMESPACE__ . '\swc_content_none' );
 
 
 function swc_footer_credits() {
 	print apply_filters( 'do_shortcode', do_shortcode( get_theme_mod( 'footer_credits', swc_get_theme_option_default( 'footer_credits' ) ) ) );
 }
-add_action( 'swc_footer_credits', 'swc_footer_credits' );
+add_action( 'swc_footer_credits', __NAMESPACE__ . '\swc_footer_credits' );

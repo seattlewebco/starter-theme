@@ -7,6 +7,8 @@
  * @package swc
  */
 
+require_once __DIR__ . '/lib/setup.php';
+
 /**
  * Returns the theme version string
  * 
@@ -210,59 +212,6 @@ function swc_scripts() {
 	}
 }
 add_action( 'wp_enqueue_scripts', 'swc_scripts', 15 );
-
-/**
- * Include required helper functions.
- */
-require get_template_directory() . '/inc/helpers.php';
-
-/**
- * Implement the Custom Header feature.
- */
-require get_template_directory() . '/inc/hero-section.php';
-
-/**
- * Implement custom template hooks.
- */
-require get_template_directory() . '/inc/template-hooks.php';
-
-/**
- * Custom template tags for this theme.
- */
-require get_template_directory() . '/inc/template-tags.php';
-
-/**
- * Meta boxes.
- */
-require get_template_directory() . '/inc/meta-boxes.php';
-
-/**
- * Functions which enhance the theme by hooking into WordPress.
- */
-require get_template_directory() . '/inc/template-functions.php';
-
-/**
- * Shortcodes.
- */
-require get_template_directory() . '/inc/shortcodes.php';
-
-/**
- * Customizer additions.
- */
-require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Easy Digital Downloads.
- */
-require get_template_directory() . '/inc/plugins/easy-digital-downloads.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
-
 
 add_action( 'admin_enqueue_scripts', function() {
 	wp_enqueue_media();

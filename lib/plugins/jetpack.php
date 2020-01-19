@@ -7,6 +7,8 @@
  * @package swc
  */
 
+namespace SeattleWebCo\StarterTheme\Plugins;
+
 /**
  * Jetpack setup function.
  *

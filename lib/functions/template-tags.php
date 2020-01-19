@@ -7,10 +7,12 @@
  * @package swc
  */
 
+namespace SeattleWebCo\StarterTheme\Functions;
+
 /**
  * Prints HTML with meta information for the current post-date/time.
  */
-function swc_posted_on() {
+function posted_on() {
 	$time_string = '<time class="entry-date published updated" datetime="%1$s">%2$s</time>';
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time><time class="updated" datetime="%3$s">%4$s</time>';
@@ -36,7 +38,7 @@ function swc_posted_on() {
 /**
  * Prints HTML with meta information for the current author.
  */
-function swc_posted_by() {
+function posted_by() {
 	$byline = sprintf(
 		/* translators: %s: post author. */
 		esc_html_x( 'by %s', 'post author', 'swc' ),
@@ -51,7 +53,7 @@ function swc_posted_by() {
  * Prints HTML with meta information for the categories, tags and comments.
  */
 
-function swc_get_entry_footer() {
+function get_entry_footer() {
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">';
 		comments_popup_link(
@@ -95,7 +97,7 @@ function swc_get_entry_footer() {
  * Wraps the post thumbnail in an anchor element on index views, or a div
  * element when on single views.
  */
-function swc_post_thumbnail() {
+function post_thumbnail() {
 	if ( post_password_required() || is_attachment() || ! has_post_thumbnail() ) {
 		return;
 	}
@@ -123,7 +125,7 @@ function swc_post_thumbnail() {
 	endif; // End is_singular().
 }
 
-function swc_get_the_title( $before = '', $after = '' ) {
+function the_page_title( $before = '', $after = '' ) {
 	global $wp_query;
 
 	$heading = '';

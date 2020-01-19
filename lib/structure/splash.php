@@ -34,7 +34,7 @@ add_action( 'wp_enqueue_scripts', 'splash_template_css', 15 );
 
 /*
 function splash_template_title() {
-    print swc_get_the_title( '<h1>', '</h1>' );
+    print the_page_title( '<h1>', '</h1>' );
 }
 add_action( 'swc_before_content', 'splash_template_title' );
 */

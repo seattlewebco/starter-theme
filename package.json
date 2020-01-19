@@ -1,7 +1,7 @@
 {
-  "name": "swc",
+  "name": "starter-theme",
   "version": "1.0.3",
-  "description": "Seattle Web Co. theme with a modern development workflow.",
+  "description": "Seattle Web Co. starter theme with a modern development workflow.",
   "repository": {
     "type": "git",
     "url": "https://github.com/seattlewebco/starter-theme.git"
@@ -41,7 +41,7 @@
     "stylelint-order": "^0.8.1",
     "stylelint-prettier": "^1.1.2",
     "superfish": "^1.7.10",
-    "theme-claim": "^0.1.2",
+    "theme-claim": "^0.1.6",
     "vue-template-compiler": "^2.6.10"
   },
   "theme": {

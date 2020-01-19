@@ -5,6 +5,18 @@
  * @package swc
  */
 
+namespace SeattleWebCo\StarterTheme\Admin;
+
+class Customizer {
+
+	public function __construct() {
+		print 123;
+	}
+
+}
+
+
+
 /**
  * Add postMessage support for site title and description for the Theme Customizer.
  *
