@@ -1,6 +1,6 @@
-# Seattle Web Co. theme
+# Seattle Web Co. Starter Theme
 
-[![WordPress](https://img.shields.io/badge/wordpress-4.9.8%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/seothemes/swc/blob/master/LICENSE.md)
+[![WordPress](https://img.shields.io/badge/wordpress-5.3.2%20tested-brightgreen.svg)]() [![License](https://img.shields.io/badge/license-GPL--3.0--or--later-blue.svg)](https://github.com/seothemes/swc/blob/master/LICENSE.md)
 
 A developer-friendly starter theme used for creating commercial child themes for the Genesis Framework.
 
