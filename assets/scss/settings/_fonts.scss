@@ -1,0 +1,31 @@
+////
+/// Font settings.
+///
+/// @group  Settings
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://seothemes.com/themes/swc
+////
+
+$sailec: ( Thin: 200, Light: 300, Regular: 400, Bold: 700, Black: 900 );
+
+@each $name, $weight in $sailec {
+    @include font-face( "Sailec", "../fonts/Sailec#{$name}", ( "eot", "ttf", "woff" ) ) {
+        font-style: normal;
+        font-weight: $weight;
+   }
+}
+
+@include font-face( "Font Awesome 5 Brands", "../fonts/fa-brands-400", ( "eot", "ttf", "woff", "woff2", "svg" ) ) {
+    font-style: normal;
+    font-weight: 400;
+}
+
+@include font-face( "Font Awesome 5 Free", "../fonts/fa-regular-400", ( "eot", "ttf", "woff", "woff2", "svg" ) ) {
+    font-style: normal;
+    font-weight: 400;
+}
+
+@include font-face( "Font Awesome 5 Free", "../fonts/fa-solid-900", ( "eot", "ttf", "woff", "woff2", "svg" ) ) {
+    font-style: normal;
+    font-weight: 900;
+}

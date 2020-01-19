@@ -1,0 +1,43 @@
+////
+/// Menu component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.menu {
+	margin: 0;
+	list-style-type: none;
+
+	// Menu item.
+	&-item {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		padding: $spacing--xxs 0;
+		position: relative;
+
+		&.button {
+			padding: 0;
+
+			@include mq(m) {
+				margin-left: $spacing--m;
+			}
+		}
+	}
+
+	// Link
+	a {
+		color: inherit;
+		text-decoration: none;
+		display: flex;
+		align-items: center;
+		width: 100%;
+
+		@include hover-focus {
+			color: $color--primary;
+		}
+	}
+}

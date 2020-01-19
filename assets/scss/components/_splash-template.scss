@@ -1,0 +1,24 @@
+////
+/// Splash template.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.splash-template {
+    @include overlay;
+    overflow: visible;
+    background-size: cover;
+    background-attachment: fixed;
+
+    .content {
+        background: $color--white;
+        margin-top: $spacing--xxxxl;
+        padding: $spacing--l;
+
+        @include mq(m) {
+            padding: $spacing--xxl;
+        }
+    }
+}

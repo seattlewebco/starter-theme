@@ -1,0 +1,21 @@
+////
+/// Transparent header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.transparent-header {
+
+	.site-header {
+		background-color: transparent;
+	}
+
+	.hero-section {
+
+		.wrap {
+			margin-top: $spacing--xxl;
+		}
+	}
+}

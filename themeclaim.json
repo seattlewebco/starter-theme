@@ -1,0 +1,10 @@
+{
+  "from": {
+    "Name": "Seattle Web Co. theme",
+    "Description": "Seattle Web Co. theme with a modern development workflow.",
+    "Namespace": "SeoThemes\\GenesisStarterTheme",
+    "Uri": "https://genesisstartertheme.com/",
+    "Author": "SEO Themes",
+    "AuthorUri": "https://seothemes.com/"
+  }
+}

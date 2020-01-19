@@ -1,0 +1,76 @@
+////
+/// Menu toggle component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.menu-toggle {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	background: none;
+	order: 1;
+	box-sizing: content-box;
+	padding: $spacing--s;
+
+	@include size($spacing--m * $perfect-fifth);
+
+	@include mq(m) {
+		display: none;
+	}
+
+	@include hover-focus {
+		background: none;
+	}
+
+	&:focus {
+		outline: $base--border;
+	}
+
+	.hamburger,
+	.hamburger:before,
+	.hamburger:after {
+		display: block;
+		position: absolute;
+		width: $spacing--m * $perfect-fifth;
+		height: 2px;
+		background-color: $color--white;
+		content: "";
+	}
+
+	.hamburger {
+		top: auto;
+		right: auto;
+		bottom: auto;
+		margin: auto;
+
+		&:before {
+			top: -$spacing--s;
+		}
+
+		&:after {
+			bottom: -$spacing--s;
+		}
+	}
+
+	&.activated {
+
+		.hamburger {
+			background-color: transparent;
+
+			&:before {
+				top: 0;
+				transform: rotate(45deg);
+			}
+
+			&:after {
+				bottom: 0;
+				transform: rotate(-45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+////
+/// Hero section component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+@mixin hero-section {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	padding: $spacing--l 0;
+	border-bottom: $base--border;
+	background-position: center;
+	background-size: cover;
+	text-align: left;
+	background: rgb(226,255,181);
+	background: linear-gradient(80deg, rgba(226,255,181,1) 0%, rgba(32,179,182,1) 100%);
+
+	@include mq(m) {
+		padding: $spacing--xl 0;
+	}
+
+	.wrap {
+		justify-content: center;
+		position: relative;
+	}
+
+	h1 {
+		color: $color--white;
+		font-size: $font-size--hero-title;
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	p {
+		color: $color--white;
+		margin-top: $spacing--m;
+		margin-bottom: 0;
+	}
+}
+
+.hero-section {
+
+	@include hero-section;
+}

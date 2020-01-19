@@ -1,0 +1,17 @@
+////
+/// Footer credits component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.footer-credits {
+	background: $color--white;
+	font-size: $base--font-size / $major-second;
+
+
+	p {
+		margin-bottom: $gutter;
+	}
+}

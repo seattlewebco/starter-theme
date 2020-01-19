@@ -1,0 +1,29 @@
+////
+/// Site header object.
+///
+/// @group  Objects
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.site-header {
+	position: relative;
+	z-index: 10;
+	color: $color--white;
+	background-color: $color--header;
+	width: 100%;
+	max-height: $base--header-height;
+	display: flex;
+	flex-wrap: nowrap;
+
+	.wrap {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+
+		@include mq(m) {
+			flex-wrap: nowrap;
+		}
+	}
+}

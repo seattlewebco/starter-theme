@@ -1,0 +1,143 @@
+////
+/// Nav Primary component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.nav-primary {
+	order: 2;
+	width: 75vw;
+	margin: 0 -5vw;
+	padding: $spacing--m 5vw;
+	background-color: $color--submenu;
+	position: absolute;
+	top: 0;
+	height: 100vh;
+	visibility: hidden;
+	opacity: 0;
+	transition: all ease .2s;
+	transform: translate( -100%, 0 );
+
+	&.toggled {
+		transform: translate( 0 );
+		visibility: visible;
+		opacity: 1;
+	}
+
+	@include mq(m) {
+		display: flex !important;
+		position: relative;
+		top: auto;
+		width: auto;
+		height: auto;
+		margin: 0 0 0 auto;
+		padding: 0;
+		background: 0;
+		transform: none;
+		opacity: 1;
+		visibility: visible;
+	}
+
+	.menu {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+
+		&-item {
+			a {
+				color: $color--white;
+				font-weight: $font-weight--light;
+				text-transform: uppercase;
+				font-size: $base--font-size / $augmented-fourth;
+				letter-spacing: .125em;
+				
+			}
+		}
+
+		> .menu-item {
+			> a {
+				opacity: .8;
+			}
+
+			> a:hover,
+			> a:focus,
+			> a:active,
+			&.current-menu-item > a {
+				opacity: 1;
+			}
+		}
+
+		@include mq(m) {
+			flex-direction: row;
+
+			&-item {
+				height: $base--header-height;
+				padding: $spacing--m $spacing--m * $major-third;
+
+				&:last-child {
+					padding-right: 0;
+				}
+
+				.menu-item {
+					height: auto;
+				}
+			}
+		}
+
+		&-item-has-children { 
+			> a {
+				&:after {
+					content: '';
+					width: 0;
+					height: 0;
+					border-style: solid;
+					border-width: 4px 3.5px 0 3.5px;
+					border-color: $color--white transparent transparent transparent;
+					display: inline-block;
+					margin: 0 0 0 $spacing--xxs;
+					transform: rotate(0);
+					@include transition;
+				}
+			}
+
+			@include hover-focus {
+				> a:after {
+					transform: rotate(180deg) translateY(25%);
+				}
+			}
+		}
+	}
+
+	a:hover,
+	a:focus,
+	.current-menu-item > a {
+		
+	}
+}
+
+/*
+.menu-indicator {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	transition: .4s;
+	z-index: 1;
+
+	&:before {
+		content: '';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 7px 8px 7px;
+		border-color: transparent transparent $color--white transparent;
+		display: inline-block;
+		position: absolute;
+		bottom: 0;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+*/

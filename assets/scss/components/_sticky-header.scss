@@ -1,0 +1,20 @@
+////
+/// Sticky header component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.sticky-header {
+
+	.site-header {
+		position: fixed;
+
+		@include transition;
+
+		&.sticky {
+			background-color: rgba( $color--header, 100% );
+		}
+	}
+}

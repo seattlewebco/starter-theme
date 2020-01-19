@@ -1,0 +1,14 @@
+////
+/// Layout and width settings.
+///
+/// @group  Settings
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://seothemes.com/themes/swc
+////
+
+$layout--width: $mq-xl;
+$layout--width--sidebar: $one-fourth;
+$layout--width--content: calc(#{$layout--width} - (#{$layout--width--sidebar} + #{$spacing--xl}));
+$layout--max-width: 90%;
+$layout--max-width--content: calc(100% - (#{$layout--width--sidebar} + #{$spacing--xl}));
+

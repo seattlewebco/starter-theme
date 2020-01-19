@@ -1,0 +1,70 @@
+////
+/// Title area component.
+///
+/// @group  Components
+/// @author Lee Anthony <seothemeswp@gmail.com>
+/// @link   https://github.com/seothemes/swc
+////
+
+.title-area {
+	line-height: $line-height--heading;
+
+	@include padding( $spacing--s 0 );
+}
+
+// Site title.
+.site-title {
+	margin: 0;
+	font-size: 1em;
+	font-weight: $font-weight--semibold;
+
+	.wp-custom-logo & {
+
+		@include hide-visually;
+	}
+
+	a {
+		color: $color--text;
+
+		@include hover-focus {
+			color: $color--primary;
+		}
+	}
+}
+
+// Site description.
+.site-description {
+	margin: 0;
+	font-size: small;
+
+	.wp-custom-logo & {
+
+		@include hide-visually;
+	}
+}
+
+// Custom sticky logo.
+.custom-sticky-logo {
+	.site-header:not(.sticky) & {
+		display: none;
+	}
+}
+
+// Custom logo.
+.custom-logo {
+	display: block;
+
+	@include mq($until: m) {
+		transform: scale(.85);
+    	transform-origin: left center;
+	}
+
+	&-link {
+		display: flex;
+		align-items: center;
+	}
+
+	.sticky .custom-sticky-logo + & {
+		display: none;
+	}
+}
